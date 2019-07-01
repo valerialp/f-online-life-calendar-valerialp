@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
       local: JSON.parse(localStorage.getItem('moods')) || [],
       selected: {
-        date: "",
+        date:  new Date().toISOString().slice(0, 10),
         menssage: "",
         mood: ""
       }

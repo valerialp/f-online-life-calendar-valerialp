@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 import Button from "../Button";
+import good from "../../images/good.svg";
+import bad from "../../images/bad.svg";
 
 class Home extends React.Component {
   render() {
@@ -13,9 +15,19 @@ class Home extends React.Component {
         </Link>
         <ul className="page__list-container">
           {this.props.local.length ? (
-            this.props.local.map(item => (
-              <li className="page__list-card">{item.mood}</li>
-            ))
+            this.props.local.map(item => {
+              return (
+                <li className="page__list-card">
+                  <img
+                    className="card-image"
+                    src={item.mood === "good" ? good : bad}
+                    alt={item.mood}
+                  />
+                  <p className="tooltiptext">{item.date}</p>
+                  <p className="tooltiptext">{item.menssage}</p>
+                </li>
+              );
+            })
           ) : (
             <p>No hay estados aún</p>
           )}
