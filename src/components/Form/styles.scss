@@ -1,0 +1,87 @@
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 280px;
+    padding:0 20px;
+}
+
+.form__date{
+    &-fieldset{
+        border: none;
+        display: flex;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }
+    &-legend{
+        margin-bottom: 5px;
+        text-align: left;
+        font-weight: 600;
+    }
+    &-label{
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+    }
+    &-input{
+        width: 200px;
+        border:none;
+        border-bottom: 1px solid grey
+    }
+}
+
+.form__mood{
+    &-fieldset{
+        border: none;
+    }
+    &-legend{
+        margin-bottom: 5px;
+        text-align: left;
+        font-weight: 600;
+    }
+    &-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &-input{
+    }
+}
+
+.form__menssage{
+    &-fieldset{
+        border:none;
+    }
+    &-legend{
+        margin-bottom: 5px;
+        font-weight: 600;
+        text-align: left;
+    }
+    &-label{
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+    }
+    &-input{
+        width: 200px;
+        margin:0 40px 0 5px;
+    }
+}
+
+.btn-save{
+    background-color:  rgb(0, 115, 209);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.btn-cancel{
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid black;
+}
